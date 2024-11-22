@@ -80,30 +80,28 @@ export default function Register() {
               {successMsg}
             </div>
           )}
-          <form onSubmit={formik.handleSubmit}>
-            <div  className='w-full flex flex-col gap-4'>
-           
-              <label className="mt-3" htmlFor="name">
-                Name
-              </label>
-              <input
-                onBlur={formik.handleBlur}
-                onChange={formik.handleChange}
-                value={formik.values.name}
-                id="name"
-                placeholder="name"
-                type="text"
-                className="form-control "
-              />
-              {formik.errors.name && formik.touched.name ? (
-                <div className="alert alert-danger text-center">
-                  {" "}
-                  {formik.errors.name}
-                </div>
-              ) : (
-                ""
-              )}
-            </div>
+          <form onSubmit={formik.handleSubmit} className="w-full flex flex-col gap-4">
+            <label className="mt-3" htmlFor="name">
+              Name
+            </label>
+            <input
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              value={formik.values.name}
+              id="name"
+              placeholder="name"
+              type="text"
+              className="w-full p-2 border border-gray-300 rounded-md"
+            />
+            {formik.errors.name && formik.touched.name ? (
+              <div className="alert alert-danger text-center">
+                {" "}
+                {formik.errors.name}
+              </div>
+            ) : (
+              ""
+            )}
+
             <label className="mt-3" htmlFor="email">
               Email
             </label>
@@ -114,7 +112,7 @@ export default function Register() {
               id="email"
               placeholder="email"
               type="email"
-              className="form-control"
+              className="w-full p-2 border border-gray-300 rounded-md"
             />
             {formik.errors.email && formik.touched.email ? (
               <div className="alert alert-danger text-center">
@@ -135,7 +133,7 @@ export default function Register() {
               id="phone"
               placeholder="phone"
               type="text"
-              className="form-control"
+              className="w-full p-2 border border-gray-300 rounded-md"
             />
             {formik.errors.phone && formik.touched.phone ? (
               <div className="alert alert-danger text-center">
@@ -156,7 +154,7 @@ export default function Register() {
               id="password"
               placeholder="password"
               type="password"
-              className="form-control"
+              className="w-full p-2 border border-gray-300 rounded-md"
             />
             {formik.errors.password && formik.touched.password ? (
               <div className="alert alert-danger text-center">
@@ -177,7 +175,7 @@ export default function Register() {
               id="rePassword"
               placeholder="rePassword"
               type="password"
-              className="form-control"
+              className="w-full p-2 border border-gray-300 rounded-md"
             />
             {formik.errors.rePassword && formik.touched.rePassword ? (
               <div className="alert alert-danger text-center">
@@ -188,11 +186,11 @@ export default function Register() {
               ""
             )}
 
-            <button className="btn btn-outline-primary mt-3" type="submit">
+            <button className="btn btn-outline-primary mt-3 w-full" type="submit">
               Register
             </button>
           </form>
-          <div className="mt-4 text-center">
+          <div className="mt-4 text-center space-x-2">
             <span className="text-sm text-gray-800 dark:text-gray-800">
               Already have an account?
             </span>

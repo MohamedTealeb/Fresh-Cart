@@ -1,4 +1,3 @@
-
 import { useContext, useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../Contexts/AuthContextProvider'
@@ -20,7 +19,7 @@ export default function Navbar() {
       <div className="text-white font-bold text-xl me-4">
         <NavLink to="/">Freshcart</NavLink>
       </div>
-      {userToken&&   <div className="hidden md:block">
+      {userToken&&   <div className="hidden md:block ">
         <ul className="flex items-center space-x-2">
           <li><NavLink to={"/"} className="text-white">Home</NavLink></li>
           <li><NavLink to={"/Brands"} className="text-white">Brands</NavLink></li>
@@ -39,18 +38,19 @@ export default function Navbar() {
       </div>
       </div>
       <div className='flex gap-2 items-center'>
-        <div className="social">
-        <i className="fa-brands  text-white mx-1 fa-facebook-f" ></i>
-        <i className="fa-brands  text-white mx-1 fa-twitter" ></i>
-        <i className="fa-brands  text-white mx-1 fa-linkedin" ></i>
-        <i className="fa-brands  text-white mx-1 fa-youtube" ></i>
-        <i className="fa-brands  text-white mx-1 fa-tiktok" ></i>
+        <div className="social flex space-x-2">
+          <i className="fa-brands text-white mx-1 fa-facebook-f text-lg md:text-xl"></i>
+          <i className="fa-brands text-white mx-1 fa-twitter text-lg md:text-xl"></i>
+          <i className="fa-brands text-white mx-1 fa-linkedin text-lg md:text-xl"></i>
+          <i className="fa-brands text-white mx-1 fa-youtube text-lg md:text-xl"></i>
+          <i className="fa-brands text-white mx-1 fa-tiktok text-lg md:text-xl"></i>
         </div>
 <div className='flex gab-1 '>
   {!userToken&&<>
-    <li><Link to={"/login"} className="block px-1 py-2 text-white  rounded">Login</Link></li>
-    <li><Link to={"/register"} className="block px-1 py-2 text-white rounded">Register</Link></li>
-  
+    <ul className="flex space-x-2">
+      <li><Link to={"/login"} className="block px-1 py-2 text-white rounded">Login</Link></li>
+      <li><Link to={"/register"} className="block px-1 py-2 text-white rounded">Register</Link></li>
+    </ul>
   </>}
 
        {userToken&& <li><button onClick={signout} className="block px-1 py-2 text-white rounded">SignOut</button></li>}

@@ -95,7 +95,7 @@ export default function Login() {
               id="email"
               placeholder="email"
               type="email"
-              className="form-control"
+              className="form-control w-full"
             />
             {formik.errors.email && formik.touched.email ? (
               <div className="alert alert-danger text-center">
@@ -116,7 +116,7 @@ export default function Login() {
               id="password"
               placeholder="password"
               type="password"
-              className="form-control"
+              className="form-control w-full"
             />
             {formik.errors.password && formik.touched.password ? (
               <div className="alert alert-danger text-center">
@@ -127,7 +127,7 @@ export default function Login() {
               ""
             )}
 
-            <button className="btn btn-outline-primary mt-3" type="submit">
+            <button className="btn btn-outline-primary mt-3 w-full" type="submit">
               Login
             </button>
           </form>
