@@ -1,23 +1,15 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import Slider from "react-slick";
 import { addproducttocart } from '../../CartServies';
 import { AuthContext } from './../../Contexts/AuthContextProvider';
 
 export default function RelatedProduct({relatedproduct}) {
   let {userToken}=  useContext(AuthContext)
-    var settings = {
-        dots: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 5,
-        slidesToScroll: 4,
-      };
   return <>
   <div className="mt-16">
                   <h3 className="text-gray-600 text-2xl font-medium">More Products</h3>
                 
- <Slider {...settings}>
+ <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
  {relatedproduct.map((product,index)=>{
     return <div key={index} className="w-full max-w-sm mx-auto  p-2 overflow-hidden">
         <div className='rounded-md shadow-md'>
@@ -36,7 +28,7 @@ export default function RelatedProduct({relatedproduct}) {
     </div>
 </div>
 })}
- </Slider>
+ </div>
 
                    
           </div>
