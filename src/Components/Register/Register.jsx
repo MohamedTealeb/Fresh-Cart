@@ -66,7 +66,7 @@ export default function Register() {
       
       <div className="min-h-screen flex items-center justify-center">
         <div className="w-full md:w-1/2 lg:w-1/3 mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md px-8 py-10 flex flex-col items-center">
-          <h2 className="text-xl font-bold text-center text-gray-700 dark:text-gray-200 mb-8">
+          <h2 className="text-xl font-bold text-center text-gray-800 dark:text-gray-800 mb-8">
             Welcome to freshcart
           </h2>
 
@@ -193,10 +193,10 @@ export default function Register() {
             </button>
           </form>
           <div className="mt-4 text-center">
-            <span className="text-sm text-gray-500 dark:text-gray-300">
+            <span className="text-sm text-gray-800 dark:text-gray-800">
               Already have an account?
             </span>
-            <Link to="/login" className="no-underline">
+            <Link to="/login" className="text-blue-500 hover:text-blue-600 no-underline">
               Login
             </Link>
           </div>
